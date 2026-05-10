@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KSFTSVZV');</script>
+<!-- End Google Tag Manager -->
+  <title>Contact Us | Fortis Talent & Solutions Atlanta</title>
+  <meta name="description" content="Get in touch with Fortis Talent and Solutions. Request staffing, submit a job opening, apply for a position, or ask a question. Atlanta, Georgia staffing agency.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSFTSVZV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span class="logo-name">Fortis</span><div class="logo-divider"></div><span class="logo-sub">Talent &amp; Solutions</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="staffing.html" class="nav-link">Staffing</a>
+      <a href="direct-hire.html" class="nav-link">Direct Hire</a>
+      <a href="jobs.html" class="nav-link">Jobs</a>
+      <a href="blog.html" class="nav-link">Resources</a>
+      <a href="contact.html" class="nav-cta active" style="background:var(--navy);">Get a Quote</a>
+    </div>
+    <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&q=80&fit=crop&auto=format');min-height:320px;">
+  <div class="container">
+    <div class="page-hero-inner">
+      <p class="page-hero-label">Get in Touch</p>
+      <h1>Let's talk about what you need</h1>
+      <p>Whether you need workers tomorrow or a key hire by next month, we are here to help. Fill out the form and we'll be in touch within 2 business hours.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:52px;align-items:start;">
+
+      <!-- MAIN FORM AREA -->
+      <div class="form-card">
+        <div class="tabs" id="formTabs">
+          <button class="tab-btn active" onclick="switchTab('quote',this)">Request a Quote</button>
+          <button class="tab-btn" onclick="switchTab('opening',this)">Submit a Job Opening</button>
+          <button class="tab-btn" onclick="switchTab('apply',this)">Apply for a Job</button>
+          <button class="tab-btn" onclick="switchTab('general',this)">General Message</button>
+        </div>
+
+        <!-- QUOTE REQUEST -->
+        <div class="tab-panel active" id="tab-quote">
+          <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">Request Staffing</h3>
+          <p style="font-size:14px;color:var(--text-mid);margin-bottom:24px;">Tell us what you need and we will have your account manager reach out within 2 business hours.</p>
+          <form id="quoteForm" name="staffing-quote" method="POST" data-netlify="true" onsubmit="fortisSubmit(event,'staffing_quote','quoteForm','quoteSuccess')">
+            <input type="hidden" name="form-name" value="staffing-quote">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">First Name *</label><input class="form-input" type="text" name="first-name" required placeholder="Jane"></div>
+                <div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" type="text" name="last-name" required placeholder="Smith"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Company *</label><input class="form-input" type="text" name="company" required placeholder="Your company name"></div>
+                <div class="form-group"><label class="form-label">Phone *</label><input class="form-input" type="tel" name="phone" required placeholder="(678) 782-3002"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" name="email" required placeholder="you@company.com"></div>
+              <div class="form-group"><label class="form-label">What service do you need? *</label>
+                <select class="form-select" name="service" required>
+                  <option value="">Select one</option>
+                  <option>Light Industrial / Warehouse Staffing</option>
+                  <option>Event Staffing</option>
+                  <option>Administrative / Office Staffing</option>
+                  <option>Direct Hire Recruiting</option>
+                  <option>Multiple Services</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">How many workers?</label>
+                  <select class="form-select" name="worker-count"><option>1-5</option><option>6-15</option><option>16-50</option><option>50+</option></select>
+                </div>
+                <div class="form-group"><label class="form-label">Start Date</label><input class="form-input" type="date" name="start-date"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Anything else we should know?</label><textarea class="form-textarea" name="details" placeholder="Location, shift details, special requirements..." style="min-height:90px;"></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send My Request</button>
+            </div>
+          </form>
+          <div class="form-success" id="quoteSuccess">
+            <div class="success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polyline points="6,15 12,21 22,9" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Request received!</h3>
+            <p>Your account manager will reach out within 2 business hours. If it's urgent, call us directly at (678) 782-3002.</p>
+          </div>
+        </div>
+
+        <!-- JOB OPENING -->
+        <div class="tab-panel" id="tab-opening">
+          <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">Submit a Job Opening</h3>
+          <p style="font-size:14px;color:var(--text-mid);margin-bottom:24px;">Tell us about the role and a recruiter will schedule an intake call within 1 business day.</p>
+          <form id="openingForm" name="job-opening" method="POST" data-netlify="true" onsubmit="fortisSubmit(event,'job_opening','openingForm','openingSuccess')">
+            <input type="hidden" name="form-name" value="job-opening">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Your Name *</label><input class="form-input" type="text" name="name" required placeholder="Full name"></div>
+                <div class="form-group"><label class="form-label">Company *</label><input class="form-input" type="text" name="company" required placeholder="Company name"></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" name="email" required></div>
+                <div class="form-group"><label class="form-label">Phone</label><input class="form-input" type="tel" name="phone"></div>
+              </div>
+              <div class="form-group"><label class="form-label">Job Title to Fill *</label><input class="form-input" type="text" name="job-title" required placeholder="e.g. Executive Assistant"></div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Salary Range</label>
+                  <select class="form-select" name="salary-range"><option>Under $40k</option><option>$40k-$55k</option><option>$55k-$75k</option><option>$75k-$100k</option><option>$100k+</option></select>
+                </div>
+                <div class="form-group"><label class="form-label">Hiring Timeline</label>
+                  <select class="form-select" name="timeline"><option>ASAP</option><option>Within 30 days</option><option>Within 60 days</option><option>Flexible</option></select>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label">Role Description *</label><textarea class="form-textarea" name="role-description" required placeholder="What does a great hire look like? What are the must-haves?"></textarea></div>
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;">Submit This Opening</button>
+            </div>
+          </form>
+          <div class="form-success" id="openingSuccess">
+            <div class="success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polyline points="6,15 12,21 22,9" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Opening received!</h3>
+            <p>A recruiter will reach out within 1 business day to schedule an intake call and get started on your search.</p>
+          </div>
+        </div>
+
+        <!-- APPLY -->
+        <div class="tab-panel" id="tab-apply">
+          <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">Apply for a Job</h3>
+          <p style="font-size:14px;color:var(--text-mid);margin-bottom:24px;">Submit your information and we will match you with open positions that fit your background.</p>
+          <form id="applyForm" name="job-application" method="POST" data-netlify="true" onsubmit="fortisSubmit(event,'job_application','applyForm','applySuccess')">
+            <input type="hidden" name="form-name" value="job-application">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">First Name *</label><input class="form-input" type="text" name="first-name" required></div>
+                <div class="form-group"><label class="form-label">Last Name *</label><input class="form-input" type="text" name="last-name" required></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" name="email" required></div>
+                <div class="form-group"><label class="form-label">Phone *</label><input class="form-input" type="tel" name="phone" required></div>
+              </div>
+              <div class="form-group"><label class="form-label">What kind of work are you looking for? *</label>
+                <select class="form-select" name="work-type" required>
+                  <option value="">Select one</option>
+                  <option>Warehouse / Industrial</option>
+                  <option>Event Staffing</option>
+                  <option>Administrative / Office</option>
+                  <option>Operations / Coordinator Role</option>
+                  <option>Open to anything</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Work Authorization</label>
+                  <select class="form-select" name="work-auth"><option>US Citizen</option><option>Permanent Resident</option><option>Work Visa</option></select>
+                </div>
+                <div class="form-group"><label class="form-label">Availability</label>
+                  <select class="form-select" name="availability"><option>Immediately</option><option>Within 1 week</option><option>Within 2 weeks</option><option>30+ days</option></select>
+                </div>
+              </div>
+              <div class="form-group"><label class="form-label">Tell us about your experience</label><textarea class="form-textarea" name="experience" placeholder="Previous jobs, skills, certifications, what you're good at..."></textarea></div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Submit My Application</button>
+            </div>
+          </form>
+          <div class="form-success" id="applySuccess">
+            <div class="success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polyline points="6,15 12,21 22,9" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Application received!</h3>
+            <p>We will review your info and reach out within 2 business days if we have a match. Check out our <a href="jobs.html" style="color:var(--blue);">job board</a> in the meantime.</p>
+          </div>
+        </div>
+
+        <!-- GENERAL -->
+        <div class="tab-panel" id="tab-general">
+          <h3 style="font-size:20px;font-weight:800;color:var(--navy);margin-bottom:6px;">Send Us a Message</h3>
+          <p style="font-size:14px;color:var(--text-mid);margin-bottom:24px;">Questions, feedback, partnerships, or anything else. We are a real team and we read every message.</p>
+          <form id="generalForm" name="general-message" method="POST" data-netlify="true" onsubmit="fortisSubmit(event,'general_message','generalForm','generalSuccess')">
+            <input type="hidden" name="form-name" value="general-message">
+            <div style="display:flex;flex-direction:column;gap:14px;">
+              <div class="form-row">
+                <div class="form-group"><label class="form-label">Name *</label><input class="form-input" type="text" name="name" required></div>
+                <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" name="email" required></div>
+              </div>
+              <div class="form-group"><label class="form-label">Subject</label><input class="form-input" type="text" name="subject" placeholder="What is this about?"></div>
+              <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" name="message" required placeholder="What's on your mind?" style="min-height:140px;"></textarea></div>
+              <button type="submit" class="btn btn-outline-navy" style="width:100%;justify-content:center;">Send Message</button>
+            </div>
+          </form>
+          <div class="form-success" id="generalSuccess">
+            <div class="success-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><polyline points="6,15 12,21 22,9" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Message sent!</h3>
+            <p>We typically respond within 1 business day. For urgent staffing needs, call us directly at (678) 782-3002.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div class="info-card">
+          <h4>Contact Info</h4>
+          <ul>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;opacity:.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6.06 6.06l.75-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+16787823002" style="color:var(--blue);">(678) 782-3002</a></li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;opacity:.75"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:hello@fortistalentsolutions.com" style="color:var(--blue);">hello@fortistalentsolutions.com</a></li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;opacity:.75"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Atlanta, Georgia (Metro Area)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Office Hours</h4>
+          <ul>
+            <li>Mon - Fri: 8:00 AM - 6:00 PM EST</li>
+            <li>Saturday: 9:00 AM - 2:00 PM EST</li>
+            <li>Sunday: Closed</li>
+            <li style="margin-top:8px;font-size:13px;color:var(--text-light);">Urgent staffing needs outside these hours? Leave a voicemail and we will call back first thing.</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>What Happens Next</h4>
+          <ul>
+            <li>1. We review your submission right away</li>
+            <li>2. Your account manager reaches out within 2 hours</li>
+            <li>3. We get to work on your request immediately</li>
+          </ul>
+        </div>
+        <div style="background:var(--navy);border-radius:var(--r);padding:28px;">
+          <div style="margin-bottom:12px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h4 style="font-size:16px;font-weight:800;color:var(--white);margin-bottom:8px;">Need workers today?</h4>
+          <p style="font-size:14px;color:rgba(255,255,255,.65);margin-bottom:16px;">Call us directly for urgent same-day requests.</p>
+          <a href="tel:+16787823002" class="btn btn-primary btn-sm" style="width:100%;justify-content:center;">(678) 782-3002</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="logo"><span class="logo-name">Fortis</span><div class="logo-divider"></div><span class="logo-sub">Talent &amp; Solutions</span></a><p>Atlanta's staffing and recruiting partner. Serving nationwide and surrounding areas.</p><div class="footer-contact"><a href="tel:+16787823002"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;opacity:.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6.06 6.06l.75-1.34a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(678) 782-3002</a><a href="mailto:hello@fortistalentsolutions.com"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;opacity:.75"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>hello@fortistalentsolutions.com</a></div></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="staffing.html">Temporary Staffing</a></li><li><a href="staffing.html">Event Staffing</a></li><li><a href="direct-hire.html">Direct Hire</a></li></ul></div>
+      <div class="footer-col"><h4>Cities We Serve</h4><ul><li><a href="staffing-atlanta.html">Atlanta, GA</a></li><li><a href="staffing-dallas.html">Dallas, TX</a></li><li><a href="staffing-houston.html">Houston, TX</a></li><li><a href="staffing-nashville.html">Nashville, TN</a></li><li><a href="staffing-charlotte.html">Charlotte, NC</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html">About Fortis</a></li><li><a href="blog.html">Resources</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Job Seekers</h4><ul><li><a href="jobs.html">Browse Jobs</a></li><li><a href="contact.html?form=apply">Apply Now</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Fortis Talent &amp; Solutions, LLC. Atlanta, Georgia &mdash; Serving Businesses Nationwide.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+  </div>
+</footer>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+function fortisSubmit(e, eventName, formId, successId) {
+  e.preventDefault();
+  var form = document.getElementById(formId);
+  // Fire GTM conversion event
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_submission', form_name: eventName, form_type: 'conversion' });
+  // Submit to Netlify Forms
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  }).finally(function() {
+    form.style.display = 'none';
+    document.getElementById(successId).classList.add('show');
+  });
+}
+const params = new URLSearchParams(window.location.search);
+const hash = window.location.hash;
+if (params.get('form') === 'apply' || hash === '#apply') {
+  document.querySelectorAll('.tab-btn')[2].click();
+}
+</script>
+</body>
+</html>
